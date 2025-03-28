@@ -1,0 +1,22 @@
+.container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #008080;
+  margin-bottom: 1.5rem;
+}
+
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.cardLink {
+  text-decoration: none;
+}

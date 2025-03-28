@@ -1,0 +1,68 @@
+/* Navbar.module.css */
+.header {
+  background-color: #008080; /* Teal */
+  padding: 12px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 0;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+}
+
+.nav {
+  text-align: center;
+}
+
+.navList {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.navList li a {
+  text-decoration: none; /* Remove underline */
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.navList li a:hover {
+  color: #cce7e7;
+}
+
+/* Styling for Login Button */
+.loginBtn {
+  background-color: white;
+  color: #008080;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  text-decoration: none; /* Ensure no underline */
+}
+
+.loginBtn:hover {
+  background-color: #f2f2f2;
+}

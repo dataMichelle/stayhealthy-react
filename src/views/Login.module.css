@@ -1,0 +1,68 @@
+/* Login.module.css */
+.loginContainer {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.loginTitle {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.inputField {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 12px;
+  background-color: #008080;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  background-color: #006666;
+}
+
+.orText {
+  text-align: center;
+  margin: 15px 0;
+  font-weight: bold;
+}
+
+.googleLoginBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4285f4;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+.googleIcon {
+  font-size: 20px;
+  margin-right: 10px; /* Space between icon and text */
+}
+
+.googleLoginBtn:hover {
+  background-color: #357ae8;
+}
