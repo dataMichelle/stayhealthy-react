@@ -23,7 +23,7 @@ const Navbar = () => {
     <header className={styles.header}>
       <div className={styles.container}>
         <Link to="/" className={styles.logo}>
-          <img src={logo} alt="Stay Healthy Logo" />
+          <img src={logo} alt="Stay Healthy Logo" style={{ width: "50px" }} />
           <span>Stay Healthy</span>
         </Link>
 
