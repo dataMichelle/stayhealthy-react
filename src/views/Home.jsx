@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import LandingCard from "../components/LandingCard";
 import styles from "./Home.module.css";
 import instantConsultImg from "../assets/instant_consult.png";
@@ -45,7 +46,7 @@ export default function Home() {
       {/* Landing Cards */}
       <div className={styles.cardContainer}>
         {cards.map((card) => (
-          <LandingCard key={card.link} {...card} />
+          <LandingCard key={card.link} to={card.link} {...card} />
         ))}
       </div>
     </main>

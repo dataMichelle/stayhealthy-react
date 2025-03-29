@@ -21,6 +21,7 @@ export default function Appointments() {
             title="Book an Appointment"
             description="Schedule an appointment with a healthcare provider."
             imageSrc={bookApptImg}
+            to={"/appointments/new"}
           />
         </Link>
       </div>
