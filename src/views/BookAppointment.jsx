@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./BookAppointment.module.css";
+import doctorData from "../data/doctors"; // Import doctors data
 
 const BookAppointment = () => {
   const [formData, setFormData] = useState({
@@ -7,17 +8,33 @@ const BookAppointment = () => {
     email: "",
     date: "",
     time: "",
+    specialty: "",
+    doctor: "",
   });
+
+  const specialties = doctorData.doctors
+    ? [...new Set(doctorData.doctors.map((doctor) => doctor.specialty))]
+    : [];
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+
+    if (name === "specialty") {
+      setFormData({ ...formData, specialty: value, doctor: "" });
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Appointment booked:", formData);
   };
+
+  const filteredDoctors = doctorData.doctors
+    ? doctorData.doctors.filter(
+        (doctor) => doctor.specialty === formData.specialty
+      )
+    : [];
 
   return (
     <div className={styles.container}>
@@ -66,6 +83,45 @@ const BookAppointment = () => {
             required
             className={styles.input}
           />
+        </div>
+        <div className={styles.formGroup}>
+          <label className={styles.label}>Specialty:</label>
+          <select
+            name="specialty"
+            value={formData.specialty}
+            onChange={handleChange}
+            required
+            className={styles.input}
+          >
+            <option value="" disabled>
+              Select a specialty
+            </option>
+            {specialties.map((specialty) => (
+              <option key={specialty} value={specialty}>
+                {specialty}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className={styles.formGroup}>
+          <label className={styles.label}>Doctor:</label>
+          <select
+            name="doctor"
+            value={formData.doctor}
+            onChange={handleChange}
+            required
+            className={styles.input}
+            disabled={!formData.specialty}
+          >
+            <option value="" disabled>
+              Select a doctor
+            </option>
+            {filteredDoctors.map((doctor) => (
+              <option key={doctor.id} value={doctor.id}>
+                {doctor.firstName} {doctor.lastName}
+              </option>
+            ))}
+          </select>
         </div>
         <button type="submit" className={styles.button}>
           Book Appointment
