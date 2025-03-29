@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./BookAppointment.module.css"; // Corrected import for CSS module
+import styles from "./BookAppointment.module.css";
 
 const BookAppointment = () => {
   const [formData, setFormData] = useState({
@@ -17,54 +17,59 @@ const BookAppointment = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Appointment booked:", formData);
-    // Add logic to handle form submission
   };
 
   return (
-    <div>
-      <h1>Book an Appointment</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Name:</label>
+    <div className={styles.container}>
+      <h1 className={styles.heading}>Book an Appointment</h1>
+      <form onSubmit={handleSubmit} className={styles.form}>
+        <div className={styles.formGroup}>
+          <label className={styles.label}>Name:</label>
           <input
             type="text"
             name="name"
             value={formData.name}
             onChange={handleChange}
             required
+            className={styles.input}
           />
         </div>
-        <div>
-          <label>Email:</label>
+        <div className={styles.formGroup}>
+          <label className={styles.label}>Email:</label>
           <input
             type="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
             required
+            className={styles.input}
           />
         </div>
-        <div>
-          <label>Date:</label>
+        <div className={styles.formGroup}>
+          <label className={styles.label}>Date:</label>
           <input
             type="date"
             name="date"
             value={formData.date}
             onChange={handleChange}
             required
+            className={styles.input}
           />
         </div>
-        <div>
-          <label>Time:</label>
+        <div className={styles.formGroup}>
+          <label className={styles.label}>Time:</label>
           <input
             type="time"
             name="time"
             value={formData.time}
             onChange={handleChange}
             required
+            className={styles.input}
           />
         </div>
-        <button type="submit">Book Appointment</button>
+        <button type="submit" className={styles.button}>
+          Book Appointment
+        </button>
       </form>
     </div>
   );
