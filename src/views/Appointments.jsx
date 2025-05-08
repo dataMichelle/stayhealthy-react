@@ -14,6 +14,7 @@ export default function Appointments() {
             title="Instant Consultation"
             description="Get immediate medical advice from our experts."
             imageSrc={instantConsultImg}
+            to={"/appointments/instant"}
           />
         </Link>
         <Link to="/appointments/new" className={styles.cardLink}>

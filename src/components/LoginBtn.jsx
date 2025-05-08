@@ -1,4 +1,3 @@
-// src/components/LoginBtn.jsx
 import React from "react";
 import { Link } from "react-router-dom"; // For navigation
 import { useAuthStore } from "../store/authStore"; // Zustand store for user management
@@ -26,10 +25,16 @@ const LoginBtn = () => {
           Logout
         </button>
       ) : (
-        // If the user is not logged in, show the Login button
-        <Link to="/login" className={styles.loginBtn}>
-          Login
-        </Link>
+        // If the user is not logged in, show the Login and Sign Up links
+        <div>
+          {" "}
+          <Link to="/signup" className={styles.signupBtn}>
+            Sign Up
+          </Link>
+          <Link to="/login" className={styles.loginBtn}>
+            Login
+          </Link>
+        </div>
       )}
     </div>
   );

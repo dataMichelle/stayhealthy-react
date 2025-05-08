@@ -1,70 +1,60 @@
-.signupContainer {
+/* SignUp.module.css */
+
+/* Container for the entire sign-up form */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f8f8f8;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.title {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  text-align: center;
+h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 1rem;
 }
 
-.form {
+/* Form styling */
+form {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 1rem;
 }
 
-.input {
-  padding: 12px;
-  font-size: 1rem;
+input {
+  padding: 10px;
+  font-size: 16px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 4px;
   width: 100%;
-  box-sizing: border-box;
 }
 
-.input:focus {
-  border-color: #008080;
-  outline: none;
-}
-
-.submitBtn {
+button {
   padding: 12px;
   background-color: #008080;
   color: white;
+  font-size: 16px;
   border: none;
-  border-radius: 5px;
-  font-size: 1rem;
+  border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.submitBtn:hover {
-  background-color: #006f6f;
+button:hover {
+  background-color: #006666;
 }
 
+/* Error message styling */
 .error {
   color: red;
-  font-size: 0.875rem;
+  font-size: 14px;
+  margin-top: 10px;
   text-align: center;
-}
-
-.signupRedirect {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.loginLink {
-  color: #008080;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.loginLink:hover {
-  text-decoration: underline;
 }

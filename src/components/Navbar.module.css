@@ -50,6 +50,17 @@
   color: #cce7e7;
 }
 
+/* Styling for Signup Button */
+.signupBtn {
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
 /* Styling for Login Button */
 .loginBtn {
   background-color: white;
