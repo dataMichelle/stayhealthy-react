@@ -18,13 +18,14 @@ const App = () => {
     <Router>
       <Navbar /> {/* Navbar is available on every route */}
       <Toaster
-        position="top-right"
+        position="top-center"
         reverseOrder={false}
         toastOptions={{
           duration: 3000,
           style: {
             background: "#333",
             color: "#fff",
+            transform: "translateY(-50px)",
           },
         }}
       />
