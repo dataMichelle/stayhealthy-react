@@ -1,7 +1,0 @@
-[build]
-  # Specify the directory to output the build files
-  publish = "build"   # The build folder generated after running npm run build
-  command = "npm run build"  # Run the build command in the root directory
-
-[build.environment]
-  NODE_ENV = "production"
