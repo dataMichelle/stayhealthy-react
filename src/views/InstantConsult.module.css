@@ -29,20 +29,25 @@
 }
 
 .userMessage,
-.doctorMessage {
+.aiMessage {
+  display: block; /* Ensures each message is on a new line */
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 8px;
+  max-width: 80%; /* Limit the message width */
+  word-wrap: break-word; /* Prevent overflow */
 }
 
 .userMessage {
   background-color: #d4f8e8;
-  text-align: right;
+  text-align: right; /* Right align user messages */
+  margin-left: auto; /* Push the user message to the right */
 }
 
-.doctorMessage {
-  background-color: #e9e9e9;
-  text-align: left;
+.aiMessage {
+  background-color: rgb(190, 230, 45); /* Light green background for AI */
+  text-align: left; /* Left align AI messages */
+  margin-right: auto; /* Push the AI message to the left */
 }
 
 .timestamp {
