@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./BookAppointment.module.css";
 import doctorData from "../data/doctors"; // Import doctors data
+import { toast } from "react-hot-toast"; // Import toast from react-hot-toast
 
 const BookAppointment = () => {
   const [formData, setFormData] = useState({
@@ -27,7 +28,12 @@ const BookAppointment = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Here you can handle form submission (e.g., send data to backend, etc.)
     console.log("Appointment booked:", formData);
+
+    // Show a success toast
+    toast.success("Appointment booked successfully!"); // Success toast notification
   };
 
   const filteredDoctors = doctorData.doctors

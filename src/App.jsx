@@ -11,11 +11,23 @@ import BookAppointment from "./views/BookAppointment";
 import ErrorBoundary from "./components/ErrorBoundary"; // Import ErrorBoundary
 import SelfCheckup from "./views/SelfCheckup";
 import InstantConsult from "./views/InstantConsult";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   return (
     <Router>
       <Navbar /> {/* Navbar is available on every route */}
+      <Toaster
+        position="top-right"
+        reverseOrder={false}
+        toastOptions={{
+          duration: 3000,
+          style: {
+            background: "#333",
+            color: "#fff",
+          },
+        }}
+      />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/appointments" element={<Appointments />} />
