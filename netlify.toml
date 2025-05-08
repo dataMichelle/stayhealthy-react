@@ -1,9 +1,7 @@
 [build]
-  publish = "client/build"
-  command = "npm run build --prefix client"
+  # Tells Netlify where to find the built static files (the build output directory)
+  publish = "src/build"   # The build folder generated after running npm run build
+  command = "npm run build --prefix src"  # Run the build inside the `src` folder
 
 [build.environment]
   NODE_ENV = "production"
-
-[functions]
-  directory = "netlify/functions"
