@@ -9,6 +9,8 @@ import Blog from "./views/Blog";
 import Reviews from "./views/Reviews";
 import BookAppointment from "./views/BookAppointment";
 import ErrorBoundary from "./components/ErrorBoundary"; // Import ErrorBoundary
+import SelfCheckup from "./views/SelfCheckup";
+import InstantConsult from "./views/InstantConsult";
 
 const App = () => {
   return (
@@ -17,6 +19,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/appointments" element={<Appointments />} />
+        <Route path="/appointments/instant" element={<InstantConsult />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/reviews" element={<Reviews />} />
         <Route path="/login" element={<Login />} />
@@ -29,6 +32,7 @@ const App = () => {
             </ErrorBoundary>
           }
         />
+        <Route path="/self-checkup" element={<SelfCheckup />} />
       </Routes>
     </Router>
   );

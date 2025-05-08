@@ -1,0 +1,9 @@
+[build]
+  publish = "client/build"
+  command = "npm run build --prefix client"
+
+[build.environment]
+  NODE_ENV = "production"
+
+[functions]
+  directory = "netlify/functions"
