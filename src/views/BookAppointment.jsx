@@ -32,8 +32,20 @@ const BookAppointment = () => {
     // Here you can handle form submission (e.g., send data to backend, etc.)
     console.log("Appointment booked:", formData);
 
-    // Show a success toast
-    toast.success("Appointment booked successfully!"); // Success toast notification
+    // Show a success toast with the onClose callback to reset the form
+    toast.success("Appointment booked successfully!", {
+      onClose: () => {
+        // Clear form data when toast closes
+        setFormData({
+          name: "",
+          email: "",
+          date: "",
+          time: "",
+          specialty: "",
+          doctor: "",
+        });
+      },
+    });
   };
 
   const filteredDoctors = doctorData.doctors
