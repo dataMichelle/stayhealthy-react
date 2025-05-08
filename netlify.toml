@@ -1,7 +1,7 @@
 [build]
-  # Tells Netlify where to find the built static files (the build output directory)
-  publish = "src/build"   # The build folder generated after running npm run build
-  command = "npm run build --prefix src"  # Run the build inside the `src` folder
+  # Specify the directory to output the build files
+  publish = "my-app/build"  # This is the build folder generated after running npm run build in my-app
+  command = "npm run build --prefix stay-healthy-react"  # Run the build command inside the my-app directory
 
 [build.environment]
   NODE_ENV = "production"
